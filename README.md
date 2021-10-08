@@ -2,7 +2,7 @@
 
 This is a day planner for scheduling events. You can type in information into one of the time blocks and that data will persist after reloading the page. It also tells you what time it is and if time blocks are in the past, present or future.
 
-![This page includes the current date, timeblocks that you can enter data into and save buttons that will save the data to the timeblocks](./assets/demo/screenshot.gif)
+![This page includes the current date, timeblocks that you can enter data into and save buttons that will save the data to the timeblocks](./demo/screenshot.gif)
 
 Here is [link](https://seanscraig.github.io/day-planner/) to the live webpage
 
