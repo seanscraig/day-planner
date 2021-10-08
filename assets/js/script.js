@@ -1,31 +1,30 @@
-var currentDate = moment().format("MMMM Do YYYY");
+var currentDate = moment().format('MMMM Do YYYY');
 
 // set the current time
-$("#currentDay").text(currentDate);
+$('#currentDay').text(currentDate);
 
 // make sure the document is loaded before manipulating it
 $(document).ready(function () {
   function time() {
     var currentTime = moment().hour();
 
-    //debug stuff
-    // var debugTime = moment().set("hour", 10).hour();
-    // currentTime = debugTime;
-    console.log("current time is " + currentTime);
+    // debug stuff
+    var debugTime = moment().set('hour', 12).hour();
+    currentTime = debugTime;
 
     // loop through timeblocks
     $('.time-block').each(function () {
       
       // pull out the int from the timeblock id
-      var timeBlock = parseInt($(this).attr("id"));
+      var timeBlock = parseInt($(this).attr('id'));
 
       //check to see if the timeblock is in the past present or future
       if (timeBlock < currentTime) {
-        $(this).addClass("past");
+        $(this).addClass('past');
       } else if (timeBlock === currentTime) {
-        $(this).addClass("present");
+        $(this).addClass('present');
       } else {
-        $(this).addClass("future");
+        $(this).addClass('future');
       }
     });
   }
@@ -37,7 +36,7 @@ $(document).ready(function () {
 
     localStorage.setItem(time, text);
 
-    alert("yay!");
+    alert('event saved');
   });
 
   console.log(localStorage.getItem('9hour'));
